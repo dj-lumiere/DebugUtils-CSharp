@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.8.1] - Released at 2025.11.14
+
+## ✨ New Features
+- Added support for `DictionaryEntry` type
+
 # [v1.8.0] - Released at 2025.08.20
 
 ## 🚀 Major Features
