@@ -130,4 +130,9 @@ internal static class TypeClassifier
                type.Name.Contains(value: "AnonymousType") && (type.Name.StartsWith(value: "<>") ||
                                                               type.Name.StartsWith(value: "VB$"));
     }
+    
+    public static bool IsKeyValuePairType(this Type type)
+    {
+        return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(KeyValuePair<,>);
+    }
 }

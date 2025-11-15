@@ -85,7 +85,8 @@ internal static class ReprFormatterRegistry
             (t => t.IsAnonymousType(), new ObjectFormatter()),
             (t => typeof(Type).IsAssignableFrom(c: t), new TypeFormatter()),
             (t => t.IsMemoryType(), new MemoryFormatter()),
-            (t => t.IsReadOnlyMemoryType(), new ReadOnlyMemoryFormatter())
+            (t => t.IsReadOnlyMemoryType(), new ReadOnlyMemoryFormatter()),
+            (t => t.IsKeyValuePairType(), new KeyValuePairFormatter())
         });
         ConditionalReprTreeFormatters.AddRange(
             collection: new List<(Func<Type, bool>, IReprTreeFormatter)>
@@ -103,7 +104,8 @@ internal static class ReprFormatterRegistry
                 (t => typeof(Type).IsAssignableFrom(c: t), new TypeFormatter()),
                 (t => t.IsMemoryType(), new MemoryFormatter()),
                 (t => t.IsReadOnlyMemoryType(), new ReadOnlyMemoryFormatter()),
-                (t => t.IsAnonymousType(), new ObjectFormatter())
+                (t => t.IsAnonymousType(), new ObjectFormatter()),
+                (t => t.IsKeyValuePairType(), new KeyValuePairFormatter())
             });
     }
     public static IReprFormatter GetStandardFormatter(this Type type)

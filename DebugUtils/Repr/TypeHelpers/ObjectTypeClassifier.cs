@@ -51,4 +51,9 @@ internal static class ObjectTypeClassifier
         var type = obj?.GetType() ?? typeof(T);
         return type.NeedsTypePrefixType();
     }
+    public static bool IsKeyValuePair<T>(this T obj)
+    {
+        var type = obj?.GetType() ?? typeof(T);
+        return type.IsKeyValuePairType();
+    }
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.8.2] - Released at 2025.11.15
+
+## ✨ New Features
+- Added support for `KeyValuePair` type
+
 # [v1.8.1] - Released at 2025.11.14
 
 ## ✨ New Features
